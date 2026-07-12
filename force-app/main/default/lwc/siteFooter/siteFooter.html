@@ -1,0 +1,183 @@
+<template>
+    <footer class="site-footer">
+        <div class="section-inner">
+            <!-- FOUR COLUMNS GRID -->
+            <div class="footer-grid">
+                
+                <!-- COLUMN 1: Logo, Description & Socials -->
+                <div class="footer-column col-brand">
+                    <div class="logo-container">
+                        <template if:true={logoImageUrl}>
+                            <img src={logoImageUrl} alt="Rohith Pavan Logo" class="brand-logo" />
+                        </template>
+                    </div>
+                    <span class="brand-subtitle">{subtitleText}</span>
+                    <p class="brand-desc">{descText}</p>
+                    
+                    <div class="social-row">
+                        <a href={linkedinUrl} target="_blank" class="social-btn" title="LinkedIn">
+                            <img src={linkedinIcon} alt="LinkedIn"/>
+                        </a>
+                        <a href={githubUrl} target="_blank" class="social-btn" title="GitHub">
+                            <img src={githubIcon} alt="GitHub"/>
+                        </a>
+                        <a href={trailheadUrl} target="_blank" class="social-btn" title="Trailhead">
+                            <img src={trailheadIcon} alt="Trailhead" class="social-btn-large"/>
+                        </a>
+                        <a href={emailMailto} class="social-btn" title="Email">
+                            <img src={emailIcon} alt="Email"/>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2: Quick Links -->
+                <div class="footer-column">
+                    <h3 class="col-heading">{quickLinksHeading}</h3>
+                    <div class="col-line"></div>
+                    <ul class="col-list">
+                        <li>
+                            <a href={homeLink} class="nav-item">
+                                <span class="chevron">&gt;</span>
+                                <span>{homeLabel}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={aboutLink} class="nav-item">
+                                <span class="chevron">&gt;</span>
+                                <span>{aboutLabel}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={skillsLink} class="nav-item">
+                                <span class="chevron">&gt;</span>
+                                <span>{skillsLabel}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={projectsLink} class="nav-item">
+                                <span class="chevron">&gt;</span>
+                                <span>{projectsLabel}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={achievementsLink} class="nav-item">
+                                <span class="chevron">&gt;</span>
+                                <span>{achievementsLabel}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={galleryLink} class="nav-item">
+                                <span class="chevron">&gt;</span>
+                                <span>{galleryLabel}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={contactLink} class="nav-item">
+                                <span class="chevron">&gt;</span>
+                                <span>{contactLabel}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- COLUMN 3: Projects -->
+                <div class="footer-column">
+                    <h3 class="col-heading">{projectsHeading}</h3>
+                    <div class="col-line"></div>
+                    <ul class="col-list">
+                        <li><a href={project1Url} class="project-item">{project1Title}</a></li>
+                        <li><a href={project2Url} class="project-item">{project2Title}</a></li>
+                        <li><a href={project3Url} class="project-item">{project3Title}</a></li>
+                    </ul>
+                    <a href={viewAllProjectsUrl} class="view-all-link" target="_blank" rel="noopener">
+                        <span>{viewAllLabel}</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- COLUMN 4: Connect -->
+                <div class="footer-column col-connect">
+                    <h3 class="col-heading">{connectHeading}</h3>
+                    <div class="col-line"></div>
+                    <ul class="connect-list">
+                        <!-- Email -->
+                        <li>
+                            <a href={emailMailto} class="connect-item">
+                                <svg class="connect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span class="connect-text">{emailAddress}</span>
+                            </a>
+                        </li>
+                        <!-- Location -->
+                        <li>
+                            <div class="connect-item">
+                                <svg class="connect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span class="connect-text">{locationText}</span>
+                            </div>
+                        </li>
+                        <!-- LinkedIn -->
+                        <li>
+                            <a href={linkedinUrl} target="_blank" class="connect-item">
+                                <svg class="connect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                <span class="connect-text">{linkedinDisplay}</span>
+                            </a>
+                        </li>
+                        <!-- GitHub -->
+                        <li>
+                            <a href={githubUrl} target="_blank" class="connect-item">
+                                <svg class="connect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                <span class="connect-text">{githubDisplay}</span>
+                            </a>
+                        </li>
+                        <!-- Trailhead -->
+                        <li>
+                            <a href={trailheadUrl} target="_blank" class="connect-item">
+                                <svg class="connect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span class="connect-text">{trailheadDisplay}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- BOTTOM COPYRIGHT BAR -->
+            <div class="footer-bottom-bar">
+                <span class="copyright-text">{copyrightText}</span>
+                <span class="built-with">
+                    <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span>Built with </span>
+                    <a href="https://www.salesforce.com/products/experience-cloud/" class="sf-experience-link" target="_blank" rel="noopener">{builtWithText}</a>
+                </span>
+                <button class="back-to-top-btn" onclick={scrollToTop}>
+                    <span>Back to Top</span>
+                    <svg class="top-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="19" x2="12" y2="5"></line>
+                        <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+</template>

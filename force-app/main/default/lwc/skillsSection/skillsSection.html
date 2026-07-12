@@ -1,0 +1,159 @@
+<template>
+    <section class="skills-section">
+        <div class="section-inner">
+            <!-- SECTION HEADER -->
+            <div class="skills-header">
+                <span class="eyebrow-text">{sectionHeader}</span>
+            </div>
+
+            <!-- SKILLS CONTAINER (Symmetric 2-Row Grid grouped by category) -->
+            <div class="skills-grid">
+                <!-- Group 1: Salesforce Core & Clouds -->
+                
+                <!-- 1. Agentforce -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={agentforceLogo}>
+                            <img src={agentforceLogo} alt={skill1} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill1}</span>
+                </div>
+
+                <!-- 2. Sales Cloud -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={salesCloudLogo}>
+                            <img src={salesCloudLogo} alt={skill2} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill2}</span>
+                </div>
+
+                <!-- 3. Service Cloud -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={serviceCloudLogo}>
+                            <img src={serviceCloudLogo} alt={skill3} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill3}</span>
+                </div>
+
+                <!-- 4. Experience Cloud -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={experienceCloudLogo}>
+                            <img src={experienceCloudLogo} alt={skill4} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill4}</span>
+                </div>
+
+                <!-- Group 2: Programmatic & Declarative Development -->
+
+                <!-- 5. LWC -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={lwcLogo}>
+                            <img src={lwcLogo} alt={skill5} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill5}</span>
+                </div>
+
+                <!-- 6. Apex -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={apexLogo}>
+                            <img src={apexLogo} alt={skill6} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill6}</span>
+                </div>
+
+                <!-- 7. Flow Builder -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={flowLogo}>
+                            <img src={flowLogo} alt={skill7} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill7}</span>
+                </div>
+
+                <!-- 8. SOQL -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={soqlLogo}>
+                            <img src={soqlLogo} alt={skill8} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill8}</span>
+                </div>
+
+                <!-- 9. Reports & Dashboards -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={reportsLogo}>
+                            <img src={reportsLogo} alt={skill9} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill9}</span>
+                </div>
+
+                <!-- Group 3: Core Tech, IDE, Version Control, Languages & AI -->
+
+                <!-- 10. VS Code -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={vsCodeLogo}>
+                            <img src={vsCodeLogo} alt={skill10} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill10}</span>
+                </div>
+
+                <!-- 11. Git -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={gitLogo}>
+                            <img src={gitLogo} alt={skill11} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill11}</span>
+                </div>
+
+                <!-- 12. GitHub -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={githubLogo}>
+                            <img src={githubLogo} alt={skill12} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill12}</span>
+                </div>
+
+                <!-- 13. Python -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={pythonLogo}>
+                            <img src={pythonLogo} alt={skill13} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill13}</span>
+                </div>
+
+                <!-- 14. Antigravity -->
+                <div class="skill-card">
+                    <div class="logo-wrapper">
+                        <template if:true={antigravityLogo}>
+                            <img src={antigravityLogo} alt={skill14} class="skill-logo-img" />
+                        </template>
+                    </div>
+                    <span class="skill-name">{skill14}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="viewAllProjectsUrl" type="String" label="View All Projects Link" default="#" />
+            <property name="project1ImageUrl" type="String" label="Project 1 Image URL" default="" />
+            <property name="project1Url" type="String" label="Project 1 Link" default="#" />
+            <property name="project2ImageUrl" type="String" label="Project 2 Image URL" default="" />
+            <property name="project2Url" type="String" label="Project 2 Link" default="#" />
+            <property name="project3ImageUrl" type="String" label="Project 3 Image URL" default="" />
+            <property name="project3Url" type="String" label="Project 3 Link" default="#" />
+
+            <property name="sectionLabel" type="String" label="Section Label Text" default="Projects" />
+            <property name="viewAllLabel" type="String" label="View All Projects Link Text" default="View All Projects" />
+
+            <!-- Project 1 Config -->
+            <property name="project1Type" type="String" label="Project 1 Category Badge" default="Category" />
+            <property name="project1Title" type="String" label="Project 1 Title" default="Project 1 Title" />
+            <property name="project1Desc" type="String" label="Project 1 Description" default="A description of your first project explaining what it does, who it was for, and the core benefits." />
+            <property name="project1Tech" type="String" label="Project 1 Tech (comma separated)" default="Custom Objects, Reports, App Builder" />
+            <property name="project1LinkText" type="String" label="Project 1 Action Text" default="View Project" />
+
+            <!-- Project 2 Config -->
+            <property name="project2Type" type="String" label="Project 2 Category Badge" default="Category" />
+            <property name="project2Title" type="String" label="Project 2 Title" default="Project 2 Title" />
+            <property name="project2Desc" type="String" label="Project 2 Description" default="A description of your second project explaining what it does, who it was for, and the core benefits." />
+            <property name="project2Tech" type="String" label="Project 2 Tech (comma separated)" default="Approval Process, Email Alerts, Flows" />
+            <property name="project2LinkText" type="String" label="Project 2 Action Text" default="View Project" />
+
+            <!-- Project 3 Config -->
+            <property name="project3Type" type="String" label="Project 3 Category Badge" default="Category" />
+            <property name="project3Title" type="String" label="Project 3 Title" default="Project 3 Title" />
+            <property name="project3Desc" type="String" label="Project 3 Description" default="A description of your third project explaining what it does, who it was for, and the core benefits." />
+            <property name="project3Tech" type="String" label="Project 3 Tech (comma separated)" default="Experience Builder, LWC, Responsive" />
+            <property name="project3LinkText" type="String" label="Project 3 Action Text" default="View Project" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

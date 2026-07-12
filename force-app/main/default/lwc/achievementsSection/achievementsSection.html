@@ -1,0 +1,116 @@
+<template>
+    <section class="achievements-section">
+        <div class="section-inner">
+            <!-- SECTION HEADER -->
+            <div class="achievements-header">
+                <span class="eyebrow-text">{sectionLabel}</span>
+                <div class="eyebrow-line"></div>
+            </div>
+
+            <!-- ACHIEVEMENTS GRID (4 Columns) -->
+            <div class="achievements-grid">
+                
+                <!-- Card 1: Trailhead Ranger -->
+                <div class="achievement-card">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <template if:true={rangerBadgeUrl}>
+                                <img src={rangerBadgeUrl} alt={card1Title} class="badge-img" />
+                            </template>
+                            <template if:false={rangerBadgeUrl}>
+                                <div class="badge-placeholder"></div>
+                            </template>
+                        </div>
+                        <div class="text-group">
+                            <h3 class="card-title">{card1Title}</h3>
+                            <p class="card-desc">{card1Desc}</p>
+                        </div>
+                    </div>
+                    <a href={rangerCredentialUrl} class="action-link" target="_blank" rel="noopener">
+                        <span>{card1LinkText}</span>
+                        <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2: Trailhead Badges -->
+                <div class="achievement-card">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <template if:true={badgesIconUrl}>
+                                <img src={badgesIconUrl} alt={card2Title} class="badge-img" />
+                            </template>
+                            <template if:false={badgesIconUrl}>
+                                <div class="badge-placeholder"></div>
+                            </template>
+                        </div>
+                        <div class="text-group">
+                            <h3 class="card-title">{card2Title}</h3>
+                            <p class="card-desc">{card2Desc}</p>
+                        </div>
+                    </div>
+                    <a href={badgesUrl} class="action-link" target="_blank" rel="noopener">
+                        <span>{card2LinkText}</span>
+                        <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3: Agentblazer Champion -->
+                <div class="achievement-card">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <template if:true={agentblazerBadgeUrl}>
+                                <img src={agentblazerBadgeUrl} alt={card3Title} class="badge-img" />
+                            </template>
+                            <template if:false={agentblazerBadgeUrl}>
+                                <div class="badge-placeholder"></div>
+                            </template>
+                        </div>
+                        <div class="text-group">
+                            <h3 class="card-title">{card3Title}</h3>
+                            <p class="card-desc">{card3Desc}</p>
+                        </div>
+                    </div>
+                    <a href={agentblazerCredentialUrl} class="action-link" target="_blank" rel="noopener">
+                        <span>{card3LinkText}</span>
+                        <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 4: OCI 2025 AI Foundations Associate -->
+                <div class="achievement-card">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <template if:true={ociBadgeUrl}>
+                                <img src={ociBadgeUrl} alt={card4Title} class="badge-img" />
+                            </template>
+                            <template if:false={ociBadgeUrl}>
+                                <div class="badge-placeholder"></div>
+                            </template>
+                        </div>
+                        <div class="text-group">
+                            <h3 class="card-title">{card4Title}</h3>
+                            <p class="card-desc">{card4Desc}</p>
+                        </div>
+                    </div>
+                    <a href={ociCredentialUrl} class="action-link" target="_blank" rel="noopener">
+                        <span>{card4LinkText}</span>
+                        <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</template>

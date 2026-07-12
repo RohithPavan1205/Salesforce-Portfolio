@@ -1,0 +1,182 @@
+/* ================================================================
+   achievementsSection.css  —  Premium Portfolio · Achievements Grid
+   Design references: Stripe, Apple, Linear
+   ================================================================ */
+
+:host {
+    display: block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --blue:        #1677FF;
+    --text:        #111827;
+    --text-2:      #6B7280;
+    --border:      #E8EDF5;
+    --white:       #FFFFFF;
+    --radius:      12px;
+    --radius-sm:   8px;
+}
+
+.achievements-section {
+    background: var(--white);
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-inner {
+    width: 100%;
+    padding: 0 64px 0 96px;
+    box-sizing: border-box;
+}
+
+/* ── Section Header ────────────────────────────────────────── */
+.achievements-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.eyebrow-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.2px;
+}
+
+.eyebrow-line {
+    width: 32px;
+    height: 2px;
+    background: var(--blue);
+    border-radius: 1px;
+}
+
+/* ── Grid Layout (4 columns on Desktop) ───────────────────── */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* ── Card Styling ──────────────────────────────────────────── */
+.achievement-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.02),
+        0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-height: 180px;
+}
+
+.achievement-card:hover {
+    border-color: #c7d9ff;
+    box-shadow: 0 6px 20px rgba(22, 119, 255, 0.06);
+}
+
+.card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Badge wrapper and placeholder */
+.badge-wrapper {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F8FAFC;
+    border: 1px solid var(--border);
+}
+
+.badge-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #E2E8F0;
+    border-radius: 50%;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 750;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+}
+
+.card-desc {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--text-2);
+    margin: 0;
+}
+
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue) !important;
+    text-decoration: none !important;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.link-arrow {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s ease;
+}
+
+.action-link:hover .link-arrow {
+    transform: translateX(3px);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 860px) {
+    .section-inner {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 580px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievement-card {
+        min-height: auto;
+    }
+}

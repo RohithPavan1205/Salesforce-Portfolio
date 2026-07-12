@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="rangerBadgeUrl" type="String" label="1. Trailhead Ranger Badge Image URL" default="" />
+            <property name="rangerCredentialUrl" type="String" label="1. Trailhead Ranger Credential Link" default="#" />
+            <property name="badgesIconUrl" type="String" label="2. Badges Icon Image URL" default="" />
+            <property name="badgesUrl" type="String" label="2. Badges Verification Link" default="#" />
+            <property name="agentblazerBadgeUrl" type="String" label="3. Agentblazer Badge Image URL" default="" />
+            <property name="agentblazerCredentialUrl" type="String" label="3. Agentblazer Credential Link" default="#" />
+            <property name="ociBadgeUrl" type="String" label="4. OCI AI Badge Image URL" default="" />
+            <property name="ociCredentialUrl" type="String" label="4. OCI AI Credential Link" default="#" />
+
+            <property name="sectionLabel" type="String" label="Section Label Text" default="Achievements" />
+
+            <!-- Card 1 Config -->
+            <property name="card1Title" type="String" label="Card 1 Title" default="Achievement 1 Title" />
+            <property name="card1Desc" type="String" label="Card 1 Description" default="Detail of your first credential, certification, or key milestone." />
+            <property name="card1LinkText" type="String" label="Card 1 Action Link Text" default="View Credential" />
+
+            <!-- Card 2 Config -->
+            <property name="card2Title" type="String" label="Card 2 Title" default="Achievement 2 Title" />
+            <property name="card2Desc" type="String" label="Card 2 Description" default="Detail of your second credential, certification, or key milestone." />
+            <property name="card2LinkText" type="String" label="Card 2 Action Link Text" default="View Badges" />
+
+            <!-- Card 3 Config -->
+            <property name="card3Title" type="String" label="Card 3 Title" default="Achievement 3 Title" />
+            <property name="card3Desc" type="String" label="Card 3 Description" default="Detail of your third credential, certification, or key milestone." />
+            <property name="card3LinkText" type="String" label="Card 3 Action Link Text" default="View Credential" />
+
+            <!-- Card 4 Config -->
+            <property name="card4Title" type="String" label="Card 4 Title" default="Achievement 4 Title" />
+            <property name="card4Desc" type="String" label="Card 4 Description" default="Detail of your fourth credential, certification, or key milestone." />
+            <property name="card4LinkText" type="String" label="Card 4 Action Link Text" default="View Credential" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

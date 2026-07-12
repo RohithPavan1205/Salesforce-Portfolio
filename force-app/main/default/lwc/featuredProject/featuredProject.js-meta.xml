@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="projectImageUrl" type="String" label="Project Image URL" default="" />
+            <property name="caseStudyUrl" type="String" label="Case Study URL" default="#" />
+            <property name="liveDemoUrl" type="String" label="Live Demo URL" default="#" />
+            
+            <property name="sectionLabel" type="String" label="Section Label" default="Featured Project" />
+            <property name="projectType" type="String" label="Project Type Tag" default="CRM SOLUTION" />
+            <property name="projectTitle" type="String" label="Project Title" default="Project Title" />
+            <property name="projectDescription" type="String" label="Project Description" default="A summary description of your featured project, its core features, and architectural highlights." />
+            
+            <property name="feature1" type="String" label="Feature 1 Text" default="Feature Highlight 1" />
+            <property name="feature2" type="String" label="Feature 2 Text" default="Feature Highlight 2" />
+            <property name="feature3" type="String" label="Feature 3 Text" default="Feature Highlight 3" />
+            <property name="feature4" type="String" label="Feature 4 Text" default="Feature Highlight 4" />
+            
+            <property name="impactHeading" type="String" label="Impact Title" default="Impact" />
+            <property name="impactText" type="String" label="Impact Description" default="Detail the key metrics, efficiencies gained, and business outcomes resulting from this project." />
+            
+            <property name="caseStudyLabel" type="String" label="Case Study Button Label" default="View Case Study" />
+            <property name="liveDemoLabel" type="String" label="Live Demo Button Label" default="Live Demo" />
+            
+            <property name="techStack" type="String" label="Tech Stack (comma separated)" default="Experience Cloud, LWC, Apex, Flow, SOQL, Reports" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="profilePhoto" type="String" label="Profile Photo URL"
+                default="https://res.cloudinary.com/dqvru2hvc/image/upload/v1783599084/ChatGPT_Image_Jun_24_2026_at_03_55_08_PM_lujooe.png" />
+            <property name="resumeUrl" type="String" label="Resume Download URL" default="" />
+            <property name="trailheadPoints" type="String" label="Trailhead Points"
+                default="42,000+" />
+            <property name="trailheadBadges" type="String" label="Trailhead Badge Count"
+                default="150+" />
+            <property name="flowsBuilt" type="String" label="Flows Built"
+                default="50+" />
+            <property name="projectsCompleted" type="String" label="Projects Completed"
+                default="5+" />
+            <property name="linkedinUrl" type="String" label="LinkedIn URL" default="" />
+            <property name="githubUrl" type="String" label="GitHub URL" default="" />
+            <property name="trailheadUrl" type="String" label="Trailhead Profile URL" default="" />
+            <property name="emailAddress" type="String" label="Email Address" default="" />
+            <property name="heroEyebrow" type="String" label="Hero Eyebrow Text" default="Hi, I'm" />
+            <property name="heroName" type="String" label="Hero Name Text" default="Your Name" />
+            <property name="heroRole" type="String" label="Hero Role Text" default="Salesforce Developer" />
+            <property name="heroDescription" type="String" label="Hero Description Text" default="I build scalable Salesforce experiences that automate business processes, enhance user experiences, and drive real impact." />
+            <property name="primaryCtaText" type="String" label="Primary CTA Button Text" default="View My Projects" />
+            <property name="secondaryCtaText" type="String" label="Secondary CTA Button Text" default="Download Resume" />
+            <property name="connectText" type="String" label="Connect Label Text" default="Connect with me" />
+            <property name="heroBgImage" type="String" label="Hero Background Image URL" default="https://res.cloudinary.com/dqvru2hvc/image/upload/v1783680900/60000_bcbrif.png" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

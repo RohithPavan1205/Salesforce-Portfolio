@@ -1,0 +1,80 @@
+<template>
+    <div class="hero-wrapper">
+        <!-- Dot pattern container -->
+        <div class="dot-grid-bg"></div>
+        <!-- Exact background image to dictate full height dynamically -->
+        <img src={heroBgImage} class="hero-bg-image" alt="Portfolio Background"/>
+        
+        <!-- Text overlay -->
+        <div class="hero-container-overlay">
+            <div class="hero-container">
+                <!-- LEFT COLUMN -->
+                <div class="hero-left">
+                    <div class="hero-eyebrow-container">
+                        <span class="eyebrow-text">{heroEyebrow}</span>
+                        <div class="eyebrow-line"></div>
+                    </div>
+
+                    <h1 class="hero-heading">{heroName}</h1>
+                    <h2 class="hero-subheading">{heroRole}</h2>
+
+                    <p class="hero-subtext">
+                        {heroDescription}
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="cta-buttons">
+                        <button class="btn-primary" onclick={handleViewProjects}>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>{primaryCtaText}</span>
+                        </button>
+                        <button class="btn-secondary" onclick={handleDownloadResume}>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>{secondaryCtaText}</span>
+                        </button>
+                    </div>
+
+                    <!-- Connect with me -->
+                    <div class="connect-row">
+                        <span class="connect-text">{connectText}</span>
+                        <svg class="connect-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                        <div class="social-icons">
+                            <a href={linkedinUrl} target="_blank" class="social-icon-btn" title="LinkedIn">
+                                <img src={linkedinIcon} alt="LinkedIn"/>
+                            </a>
+                            <a href={githubUrl} target="_blank" class="social-icon-btn" title="GitHub">
+                                <img src={githubIcon} alt="GitHub"/>
+                            </a>
+                            <a href={trailheadUrl} target="_blank" class="social-icon-btn" title="Trailhead">
+                                <img src={trailheadIcon} alt="Trailhead" class="social-icon-img--large"/>
+                            </a>
+                            <a href={emailMailto} class="social-icon-btn" title="Email">
+                                <img src={emailIcon} alt="Email"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN (Empty spacer to preserve layout alignment over background) -->
+                <div class="hero-right-spacer" style="visibility: hidden; pointer-events: none;"></div>
+            </div>
+
+            <!-- Scroll Explore at the bottom -->
+            <div class="scroll-explore">
+                <span class="scroll-text">Scroll to explore</span>
+                <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+</template>

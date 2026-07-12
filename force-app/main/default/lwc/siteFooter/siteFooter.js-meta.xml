@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <!-- Brand Column -->
+            <property name="logoImageUrl" type="String" label="Brand Logo Image URL" default="" />
+            <property name="subtitleText" type="String" label="Brand Subtitle Text" default="Your Professional Title" />
+            <property name="descText" type="String" label="Brand Description Text" default="A summary statement about your skills, values, and what you build for users." />
+            <property name="linkedinUrl" type="String" label="LinkedIn Profile Link" default="" />
+            <property name="githubUrl" type="String" label="GitHub Profile Link" default="" />
+            <property name="trailheadUrl" type="String" label="Trailhead Profile Link" default="" />
+            <property name="emailAddress" type="String" label="Email Address" default="your.email@example.com" />
+
+            <!-- Quick Links Column Labels -->
+            <property name="quickLinksHeading" type="String" label="Quick Links Column Heading" default="Quick Links" />
+            <property name="homeLabel" type="String" label="Link 1 Label (Home)" default="Home" />
+            <property name="homeLink" type="String" label="Link 1 Target (#)" default="#" />
+            <property name="aboutLabel" type="String" label="Link 2 Label (About)" default="About Me" />
+            <property name="aboutLink" type="String" label="Link 2 Target (#)" default="#about" />
+            <property name="skillsLabel" type="String" label="Link 3 Label (Skills)" default="Skills &amp; Technologies" />
+            <property name="skillsLink" type="String" label="Link 3 Target (#)" default="#skills" />
+            <property name="projectsLabel" type="String" label="Link 4 Label (Projects)" default="Projects" />
+            <property name="projectsLink" type="String" label="Link 4 Target (#)" default="#projects" />
+            <property name="achievementsLabel" type="String" label="Link 5 Label (Achievements)" default="Achievements" />
+            <property name="achievementsLink" type="String" label="Link 5 Target (#)" default="#achievements" />
+            <property name="galleryLabel" type="String" label="Link 6 Label (Gallery)" default="Gallery" />
+            <property name="galleryLink" type="String" label="Link 6 Target (#)" default="#gallery" />
+            <property name="contactLabel" type="String" label="Link 7 Label (Contact)" default="Contact" />
+            <property name="contactLink" type="String" label="Link 7 Target (#)" default="#contact" />
+
+            <!-- Projects Column -->
+            <property name="projectsHeading" type="String" label="Projects Column Heading" default="Projects" />
+            <property name="project1Title" type="String" label="Project 1 Title" default="Project 1 Title" />
+            <property name="project1Url" type="String" label="Project 1 Link" default="#" />
+            <property name="project2Title" type="String" label="Project 2 Title" default="Project 2 Title" />
+            <property name="project2Url" type="String" label="Project 2 Link" default="#" />
+            <property name="project3Title" type="String" label="Project 3 Title" default="Project 3 Title" />
+            <property name="project3Url" type="String" label="Project 3 Link" default="#" />
+            <property name="viewAllLabel" type="String" label="View All Projects Link Label" default="View All Projects" />
+            <property name="viewAllProjectsUrl" type="String" label="View All Projects Link Target" default="#" />
+
+            <!-- Connect Column Display Names -->
+            <property name="connectHeading" type="String" label="Connect Column Heading" default="Connect" />
+            <property name="locationText" type="String" label="Connect Location Text" default="City, Country" />
+            <property name="linkedinDisplay" type="String" label="Connect LinkedIn Text" default="linkedin.com/in/username" />
+            <property name="githubDisplay" type="String" label="Connect GitHub Text" default="github.com/username" />
+            <property name="trailheadDisplay" type="String" label="Connect Trailhead Text" default="salesforce.com/trailblazer/username" />
+
+            <!-- Bottom Bar Texts -->
+            <property name="copyrightText" type="String" label="Copyright Text" default="© 2026 Your Name. All rights reserved." />
+            <property name="builtWithText" type="String" label="Built With Text" default="Salesforce Experience Cloud" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

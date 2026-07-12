@@ -1,0 +1,312 @@
+/* ============================================================
+   heroSection.css  –  Salesforce Developer Hero Component
+   Matches the design screenshot pixel-for-pixel
+   ============================================================ */
+
+/* ── Host & wrapper ─────────────────────────────────────────── */
+:host {
+    display: block;
+    font-family: 'Inter', 'Salesforce Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --blue-primary: #0176d3;       /* Salesforce brand blue */
+    --blue-dark:    #014486;
+    --blue-light:   #e8f4fd;
+    --text-dark:    #16191f;
+    --text-muted:   #444c54;
+    --bg-page:      #f0f4f9;
+    --white:        #ffffff;
+    --green-dot:    #2e7d32;
+    --shadow-card:  0 4px 24px rgba(1, 118, 211, 0.13);
+    --radius-card:  14px;
+}
+
+.hero-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.dot-grid-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(rgba(1, 118, 211, 0.07) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-container-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 8%;
+    box-sizing: border-box;
+}
+
+.hero-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 64px 0 96px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* ── LEFT COLUMN ─────────────────────────────────────────────── */
+.hero-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.hero-right-spacer {
+    flex: 0 0 45%;
+    height: 440px;
+}
+
+/* Eyebrow and Heading */
+.hero-eyebrow-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.eyebrow-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.eyebrow-line {
+    width: 32px;
+    height: 1.5px;
+    background: var(--blue-primary);
+}
+
+.hero-heading {
+    font-size: clamp(32px, 4.5vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.hero-subheading {
+    font-size: clamp(22px, 3vw, 40px);
+    font-weight: 700;
+    color: var(--blue-primary);
+    margin: 6px 0 20px 0;
+}
+
+/* Subtext */
+.hero-subtext {
+    font-size: clamp(13px, 1.2vw, 16px);
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 0 32px 0;
+    max-width: 480px;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: clamp(6px, 1vw, 16px);
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(4px, 0.5vw, 8px);
+    padding: clamp(8px, 1vw, 14px) clamp(16px, 2vw, 32px);
+    font-weight: 600;
+    font-size: clamp(10px, 1vw, 14px);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background: var(--blue-primary);
+    color: var(--white);
+    box-shadow: 0 4px 14px rgba(1, 118, 211, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(1, 118, 211, 0.28);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1.5px solid var(--blue-primary);
+    color: var(--blue-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--blue-light);
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+}
+
+/* Connect Row */
+.connect-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 0.5vw, 8px);
+    margin-top: 24px;
+}
+
+.connect-text {
+    font-size: clamp(10px, 1vw, 15px);
+    font-weight: 600;
+    color: #4a5568;
+    white-space: nowrap;
+}
+
+.connect-arrow {
+    width: clamp(10px, 1.1vw, 16px);
+    height: clamp(10px, 1.1vw, 16px);
+    color: var(--blue-primary);
+    flex-shrink: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: clamp(6px, 0.8vw, 12px);
+    margin-left: clamp(6px, 0.8vw, 12px);
+}
+
+.social-icon-btn {
+    width: clamp(28px, 2.5vw, 38px);
+    height: clamp(28px, 2.5vw, 38px);
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.social-icon-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 4px 12px rgba(1, 118, 211, 0.18);
+}
+
+.social-icon-btn img {
+    width: clamp(12px, 1.3vw, 20px);
+    height: clamp(12px, 1.3vw, 20px);
+    object-fit: contain;
+}
+
+.social-icon-btn img.social-icon-img--large {
+    width: clamp(14px, 1.6vw, 24px);
+    height: clamp(14px, 1.6vw, 24px);
+}
+
+/* Scroll Explore */
+.scroll-explore {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-muted);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+.scroll-text {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.scroll-arrow {
+    width: 14px;
+    height: 14px;
+    color: var(--blue-primary);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+    }
+    40% {
+        transform: translate(-50%, -6px);
+    }
+    60% {
+        transform: translate(-50%, -3px);
+    }
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        padding: 0 24px;
+        gap: 40px;
+    }
+
+    .hero-right {
+        flex: unset;
+        width: 100%;
+        height: 380px;
+    }
+
+    .hero-heading {
+        font-size: 30px;
+    }
+
+    .profile-circle {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .skill-tags {
+        gap: 8px;
+    }
+
+    .hero-heading {
+        font-size: 26px;
+    }
+}

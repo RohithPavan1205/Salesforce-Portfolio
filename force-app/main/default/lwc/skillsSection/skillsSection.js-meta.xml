@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="salesforceLogo" type="String" label="Legacy Salesforce Logo URL" default="" />
+            <property name="agentforceLogo" type="String" label="1. Agentforce Logo URL" default="" />
+            <property name="salesCloudLogo" type="String" label="2. Sales Cloud Logo URL" default="" />
+            <property name="serviceCloudLogo" type="String" label="3. Service Cloud Logo URL" default="" />
+            <property name="experienceCloudLogo" type="String" label="4. Experience Cloud Logo URL" default="" />
+            <property name="lwcLogo" type="String" label="5. LWC Logo URL" default="" />
+            <property name="apexLogo" type="String" label="6. Apex Logo URL" default="" />
+            <property name="flowLogo" type="String" label="7. Flow Builder Logo URL" default="" />
+            <property name="soqlLogo" type="String" label="8. SOQL Logo URL" default="" />
+            <property name="reportsLogo" type="String" label="9. Reports &amp; Dashboards Logo URL" default="" />
+            <property name="vsCodeLogo" type="String" label="10. VS Code Logo URL" default="" />
+            <property name="gitLogo" type="String" label="11. Git Logo URL" default="" />
+            <property name="githubLogo" type="String" label="12. GitHub Logo URL" default="" />
+            <property name="pythonLogo" type="String" label="13. Python Logo URL" default="" />
+            <property name="antigravityLogo" type="String" label="14. Antigravity Logo URL" default="" />
+
+            <property name="sectionHeader" type="String" label="Section Header Title" default="TECHNOLOGIES &amp; TOOLS" />
+            <property name="skill1" type="String" label="Skill 1 Name" default="Agentforce" />
+            <property name="skill2" type="String" label="Skill 2 Name" default="Sales Cloud" />
+            <property name="skill3" type="String" label="Skill 3 Name" default="Service Cloud" />
+            <property name="skill4" type="String" label="Skill 4 Name" default="Experience Cloud" />
+            <property name="skill5" type="String" label="Skill 5 Name" default="LWC" />
+            <property name="skill6" type="String" label="Skill 6 Name" default="Apex" />
+            <property name="skill7" type="String" label="Skill 7 Name" default="Flow Builder" />
+            <property name="skill8" type="String" label="Skill 8 Name" default="SOQL" />
+            <property name="skill9" type="String" label="Skill 9 Name" default="Reports &amp; Dashboards" />
+            <property name="skill10" type="String" label="Skill 10 Name" default="VS Code" />
+            <property name="skill11" type="String" label="Skill 11 Name" default="Git" />
+            <property name="skill12" type="String" label="Skill 12 Name" default="GitHub" />
+            <property name="skill13" type="String" label="Skill 13 Name" default="Python" />
+            <property name="skill14" type="String" label="Skill 14 Name" default="Antigravity" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

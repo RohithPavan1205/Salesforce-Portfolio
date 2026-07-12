@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="connectBgImage" type="String" label="Background Image URL" default="" />
+            <property name="illustrationUrl" type="String" label="Right Illustration URL" default="" />
+            
+            <property name="sectionHeader" type="String" label="Section Title" default="Let's Connect" />
+            <property name="sectionDesc" type="String" label="Section Description" default="I am always open to discussing new opportunities, collaborating on exciting projects, or just having a conversation." />
+            <property name="contactButtonText" type="String" label="Contact Button Label" default="Contact Me" />
+            
+            <property name="emailAddress" type="String" label="Email Address" default="your.email@example.com" />
+            <property name="phoneNumber" type="String" label="Phone Number" default="+1 234 567 8900" />
+            <property name="locationText" type="String" label="Location Text" default="City, Country" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,136 @@
+/* ================================================================
+   skillsSection.css  —  Premium Portfolio · Technologies & Tools
+   Design references: Stripe, Apple, Vercel
+   ================================================================ */
+
+:host {
+    display: block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --blue:        #1677FF;
+    --text:        #111827;
+    --text-2:      #6B7280;
+    --border:      #E8EDF5;
+    --white:       #FFFFFF;
+    --radius:      12px;
+}
+
+.skills-section {
+    background: var(--white);
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-inner {
+    width: 100%;
+    padding: 0 64px 0 96px;
+    box-sizing: border-box;
+}
+
+/* Eyebrow Label */
+.skills-header {
+    margin-bottom: 24px;
+}
+
+.eyebrow-text {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+/* Skills Symmetric Grid: 7 columns on Desktop, forming exactly 2 rows */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+}
+
+/* Skill Card */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 8px;
+    height: 102px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: default;
+}
+
+.skill-card:hover {
+    border-color: #c7d9ff;
+    box-shadow: 0 4px 16px rgba(22, 119, 255, 0.05);
+}
+
+/* Logo Wrapper (Spans full card width to balance visual weight) */
+.logo-wrapper {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+/* Consistent Logo Sizing Rules for Visual Balance */
+.skill-logo-img {
+    max-width: 82px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Skill Name */
+.skill-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.25;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 860px) {
+    .section-inner {
+        padding: 0 24px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .skill-card {
+        height: 96px;
+    }
+    
+    .skill-logo-img {
+        max-width: 70px;
+        max-height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

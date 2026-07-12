@@ -1,0 +1,205 @@
+/* ================================================================
+   contactSection.css  —  Premium Portfolio · Contact Section
+   Design references: Stripe, Apple, Linear
+   ================================================================ */
+
+:host {
+    display: block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --blue:        #1677FF;
+    --blue-hover:  #0056cc;
+    --blue-soft:   #E8F1FF;
+    --text:        #111827;
+    --text-2:      #6B7280;
+    --border:      #E8EDF5;
+    --white:       #FFFFFF;
+    --radius:      12px;
+    --radius-sm:   8px;
+}
+
+.contact-section {
+    position: relative;
+    background: var(--white);
+    padding: 80px 0 60px 0;
+    overflow: hidden;
+}
+
+/* Background image underneath (absolute wrapper) */
+.connect-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.contact-container-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.section-inner {
+    width: 100%;
+    padding: 0 64px 0 96px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* ── Grid Layout ────────────────────────────────────────────── */
+.contact-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(40px, 6vw, 100px);
+}
+
+/* ── Left Column: Texts ─────────────────────────────────────── */
+.contact-left {
+    flex: 1.1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.eyebrow-line {
+    width: 32px;
+    height: 2px;
+    background: var(--blue);
+    border-radius: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-heading {
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.6px;
+    line-height: 1.1;
+    margin: 0 0 16px 0;
+}
+
+.contact-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-2);
+    margin: 0 0 32px 0;
+    max-width: 480px;
+}
+
+/* Button */
+.contact-btn {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue) !important;
+    color: var(--white) !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px !important;
+    border-radius: var(--radius-sm);
+    text-decoration: none !important;
+    box-sizing: border-box;
+    transition: background 0.2s;
+    border: none !important;
+}
+
+.contact-btn:hover {
+    background: var(--blue-hover) !important;
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* ── Right Column: Graphic ─────────────────────────────────── */
+.contact-right {
+    flex: 0.9;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ── Footer Row ────────────────────────────────────────────── */
+.contact-footer-row {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 4vw, 60px);
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    color: var(--text-2);
+    transition: color 0.2s;
+}
+
+a.footer-item:hover {
+    color: var(--blue);
+}
+
+.footer-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--text-2);
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+a.footer-item:hover .footer-icon {
+    color: var(--blue);
+}
+
+.footer-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 860px) {
+    .section-inner {
+        padding: 0 24px;
+        gap: 40px;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        flex: none;
+    }
+
+    .illustration-img {
+        max-width: 280px;
+    }
+
+    .contact-footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
